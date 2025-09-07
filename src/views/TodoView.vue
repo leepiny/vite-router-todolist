@@ -35,7 +35,7 @@
                 </li>
             </ul>
             <div class="todoList_statistics">
-              <p>{{ completedCount }} 個已完成項目</p>
+              <p>{{ completedCount }} 個等待完成項目</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ const filteredTodos = computed(() => {
 })
 
 const completedCount = computed(()=>{
-  return listInfo.value.toDo.filter(item => item.status === 'complete').length
+  return listInfo.value.toDo.filter(item => item.status === '').length
 })
 
 const logout = async ()=>{
